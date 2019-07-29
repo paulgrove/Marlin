@@ -1661,7 +1661,7 @@
 
   #if AXIS_IS_TMC(Z)
     #define Z_CURRENT     536
-    #define Z_MICROSTEPS  256
+    #define Z_MICROSTEPS  64
     #define Z_RSENSE     0.11
   #endif
 

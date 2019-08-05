@@ -1632,7 +1632,7 @@
  */
 #if HAS_TRINAMIC
 
-  #define HOLD_MULTIPLIER    0.5  // Scales down the holding current from run current
+  #define HOLD_MULTIPLIER    0.8  // Scales down the holding current from run current
   #define INTERPOLATE      false  // Interpolate X/Y/Z_MICROSTEPS to 256
 
   #if AXIS_IS_TMC(X)
@@ -1832,7 +1832,7 @@
   #define Z_HYBRID_THRESHOLD       3
   #define Z2_HYBRID_THRESHOLD      3
   #define Z3_HYBRID_THRESHOLD      3
-  #define E0_HYBRID_THRESHOLD     30
+  #define E0_HYBRID_THRESHOLD      3
   #define E1_HYBRID_THRESHOLD     30
   #define E2_HYBRID_THRESHOLD     30
   #define E3_HYBRID_THRESHOLD     30
@@ -1864,8 +1864,8 @@
 
   #if EITHER(SENSORLESS_HOMING, SENSORLESS_PROBING)
     // TMC2209: 0...255. TMC2130: -64...63
-    #define X_STALL_SENSITIVITY  10
-    #define Y_STALL_SENSITIVITY  10
+    #define X_STALL_SENSITIVITY  20
+    #define Y_STALL_SENSITIVITY  20
     //#define Z_STALL_SENSITIVITY  8
   #endif
 

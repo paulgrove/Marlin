@@ -483,6 +483,11 @@
   #define DEFAULT_Ki 1.10
   #define DEFAULT_Kd 64.25
 
+  // CR-10 Bed Autotuned (pg)
+  #define DEFAULT_bedKp 163.89
+  #define DEFAULT_bedKi 22.99
+  #define DEFAULT_bedKd 778.75
+
   // Ultimaker
   //#define DEFAULT_Kp 22.2
   //#define DEFAULT_Ki 1.08

@@ -483,11 +483,6 @@
   #define DEFAULT_Ki 1.10
   #define DEFAULT_Kd 64.25
 
-  // CR-10 Bed Autotuned (pg)
-  #define DEFAULT_bedKp 163.89
-  #define DEFAULT_bedKi 22.99
-  #define DEFAULT_bedKd 778.75
-
   // Ultimaker
   //#define DEFAULT_Kp 22.2
   //#define DEFAULT_Ki 1.08
@@ -539,9 +534,14 @@
   //#define PID_BED_DEBUG // Sends debug data to the serial port.
 
   //Stock CR-10 Bed Tuned for 70C
-  #define DEFAULT_bedKp 426.68
-  #define DEFAULT_bedKi 78.92
-  #define DEFAULT_bedKd 576.71
+  //#define DEFAULT_bedKp 426.68
+  //#define DEFAULT_bedKi 78.92
+  //#define DEFAULT_bedKd 576.71
+
+  // CR-10 Bed Autotuned (pg)
+  #define DEFAULT_bedKp 163.89
+  #define DEFAULT_bedKi 22.99
+  #define DEFAULT_bedKd 778.75
 
   //120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
   //from FOPDT model - kp=.39 Tp=405 Tdead=66, Tc set to 79.2, aggressive factor of .15 (vs .1, 1, 10)
@@ -1107,13 +1107,13 @@
  * For other boards you may need to define FIL_RUNOUT_PIN, FIL_RUNOUT2_PIN, etc.
  * By default the firmware assumes HIGH=FILAMENT PRESENT.
  */
+#define FIL_RUNOUT_PIN P1_28
 #define FILAMENT_RUNOUT_SENSOR
 #if ENABLED(FILAMENT_RUNOUT_SENSOR)
   #define NUM_RUNOUT_SENSORS   1     // Number of sensors, up to one per extruder. Define a FIL_RUNOUT#_PIN for each.
   #define FIL_RUNOUT_INVERTING false // Set to true to invert the logic of the sensor.
   #define FIL_RUNOUT_PULLUP          // Use internal pullup for filament runout pins.
   //#define FIL_RUNOUT_PULLDOWN      // Use internal pulldown for filament runout pins.
-  #define FIL_RUNOUT_PIN X_MAX_PIN
   // Set one or more commands to execute on filament runout.
   // (After 'M412 H' Marlin will ask the host to handle the process.)
   #define FILAMENT_RUNOUT_SCRIPT "M600"
